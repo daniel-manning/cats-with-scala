@@ -1,6 +1,7 @@
 package sandbox
 
-final case class Person(name: String, email: String)
+import sandbox.json.{JsObject, JsString, Json, JsonWriter}
+import sandbox.model.Person
 
 object JsonWriterInstances {
   implicit val stringWriter: JsonWriter[String] =

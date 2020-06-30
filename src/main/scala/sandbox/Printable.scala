@@ -1,11 +1,10 @@
 package sandbox
 
-final case class Cat(name: String, age: Int, color: String)
+import sandbox.model.Cat
 
 trait Printable[A] {
   def format(value: A): String
 }
-
 
 object PrintableInstances {
 
@@ -20,7 +19,6 @@ object PrintableInstances {
   implicit val printableCat = new Printable[Cat] {
     override def format(cat: Cat): String = s"${cat.name} is a ${cat.age} year-old ${cat.color} cat."
   }
-
 }
 
 object Printable {

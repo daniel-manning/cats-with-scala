@@ -1,4 +1,4 @@
-package sandbox
+package sandbox.json
 
 // Define a very simple JSON AST
 sealed trait Json
